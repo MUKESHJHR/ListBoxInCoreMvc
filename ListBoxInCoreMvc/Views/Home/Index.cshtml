@@ -1,0 +1,16 @@
+﻿@model ListBoxInCoreMvc.Models.CitiesViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<div style="font-family:arial">
+    <h2>Index</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.ListBoxFor(m => m.SelectedCities,Model.Cities,new {size=7})
+        @*@Html.ListBox("SelectedCities",Model.Cities,new {size=7})*@
+        <br />
+        <input type="submit" value="submit" />
+    }
+</div>
